@@ -32,14 +32,17 @@ multiple formats.  The XML format is useful for automation.
 
 Check common ports in metasploit database:
 
-mfsconsole -o port_report -x "services; exit"
+mfsconsole -o /reports/port_report -x "services; exit"
 
 ### Check for interesting services
 
-Wordpress
-OpenVPN
-RDS (Postgres)
+Wordpress : wpscan
 
-### Check API limits
+OpenVPN :
+RDS (Postgres) :
 
-Tool: locust, scripts in `locust/`
+### Check API limits/functionality
+
+Tool: locust, scripts in `locust/`, Run:  TEST=filname-less-extension docker-compose up
+
+Tool: artillery

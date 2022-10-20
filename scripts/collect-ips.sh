@@ -37,6 +37,3 @@ done > dns_hosts
 # Now make sure we only have a single IP address for each
 cut -d\  -f2 dns_hosts | grep -Ev '^(10\.|172\.3[12])' | sort -u > dns_ips
 
-# There will be double ups from DNS and previous resources, so we do a unique sort
-# and also remove any non-routable (private CIDR) ip addresses
-#sort -u iplist | egrep -v '^(10|172\.3[12])\.' > ips_of_interest
